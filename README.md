@@ -26,3 +26,10 @@ For this part, I wrote a python script to test the model from the Computer's Cam
 
 <img src="images/nonMask.png"/>
 <img src="images/withMask.png"/>
+
+# How to use it ?
+* Install tensorflow
+* install open cv
+* clone repository
+ ``` git clone git@github.com:Ahmed-Camara/Face-Mask-Detection.git ```
+ * execute ``` python3 predict.py ``` into terminal.
