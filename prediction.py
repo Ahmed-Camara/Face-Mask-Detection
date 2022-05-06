@@ -31,7 +31,6 @@ while True:
         image_reshaped = np.reshape(image_resized,(1,224,224,3))
         result = model.predict(image_reshaped)
         label = labels[int((result>0.5)*1)]
-
         cv2.rectangle(img,(x,y),(x+w,y+h),(0,0,255),2)  
         cv2.putText(img, label, (x, y-10),cv2.FONT_HERSHEY_SIMPLEX,0.8,(255,255,255),2)
         
