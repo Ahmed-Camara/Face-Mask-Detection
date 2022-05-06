@@ -20,23 +20,23 @@ while True:
         exit(1)
 
 
-    faces = face_cascade.detectMultiScale(img,1.32,7)
+    faces = face_cascade.detectMultiScale(img)
 
     for(x,y,w,h) in faces:
 
-        cv2.rectangle(img,(x,y),(x+w,y+h),(0,0,255),2)
+        
 
         roi_img = img[y:y+h, x:x+w]
         rerect_sized=cv2.resize(roi_img,(224,224))
         rerect_sized = np.array(rerect_sized)
         reshaped=np.reshape(rerect_sized,(1,224,224,3))
-            
         result=model.predict(reshaped)
         label = labels[int((result>0.5)*1)]
-            
+
+        cv2.rectangle(img,(x,y),(x+w,y+h),(0,0,255),2)    
         cv2.putText(img, label, (x, y-10),cv2.FONT_HERSHEY_SIMPLEX,0.8,(255,255,255),2)
         
-        cv2.imshow('Mask Detection',img)
+    cv2.imshow('Live Mask Detection',img)
 
     if cv2.waitKey(1) & 0XFF == ord('q'):
         break
