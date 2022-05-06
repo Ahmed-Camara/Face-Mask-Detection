@@ -19,3 +19,10 @@ In this project, I used only transfer learning.
 At the end of the training phase, I got 0.9869 for the validation accuracy and 0.0486 for the validation loss.
 
 <img src="images/result.png"/>
+
+#### Testing
+
+For this part, I wrote a python script to test the model from the Computer's Camera.
+
+<img src="images/result.png"/>
+<img src="images/result.png"/>
