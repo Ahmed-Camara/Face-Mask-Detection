@@ -22,8 +22,6 @@ At the end of the training phase, I got 0.9869 for the validation accuracy and 0
 
 #### Testing
 
-For this part, I wrote a python script to test the model from the Computer's Camera.
-
 <img src="images/nonMask.png"/>
 <img src="images/withMask.png"/>
 
@@ -32,4 +30,4 @@ For this part, I wrote a python script to test the model from the Computer's Cam
 * install open cv
 * clone repository
  ``` git clone git@github.com:Ahmed-Camara/Face-Mask-Detection.git ```
- * execute ``` python3 predict.py ``` into terminal.
+ * execute ``` python3 prediction.py ``` in the terminal.
